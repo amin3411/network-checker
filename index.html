@@ -1,57 +1,84 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none';
-                 script-src 'self';
-                 style-src 'self';
-                 connect-src 'self';
-                 img-src 'self';
-                 font-src 'self';
-                 object-src 'none';
-                 base-uri 'self';
-                 form-action 'none';
-                 upgrade-insecure-requests">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
   <meta name="referrer" content="no-referrer">
-
-  <title>Secure Network Checker</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <title>Can I Connect? | Network Diagnostics</title>
+  <meta name="description" content="A private, browser-based connectivity check with a responsive animated network circuit.">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <main class="container">
-    <h1>Network Connectivity Checker</h1>
-    <p>
-      Secure browser-based connectivity diagnostics
-    </p>
-
-    <section class="panel">
-      <h2>Connectivity status</h2>
-
-      <p id="browser-status">
-        Not checked
-      </p>
-
-      <button id="test-button" type="button">
-        Run Connectivity Test
-      </button>
-
-      <div id="results" role="status"
-           aria-live="polite">
-        Ready to test.
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Can I Connect? home"><span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>CAN<span class="brand-accent">I</span>CONNECT<span class="brand-accent">?</span></span></a>
+    <div class="top-right"><span class="live-dot"></span><span>NETWORK DIAGNOSTICS</span><span class="version">V1.0</span></div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> BROWSER CONNECTIVITY MONITOR <span class="eyebrow-line"></span></div>
+      <h1 id="hero-title">Every connection<br><em>starts somewhere.</em></h1>
+      <p class="hero-desc">A simple visual check of your connection to this website. No account, no tracking scripts, no backend.</p>
+      <div class="diagram-frame">
+        <div class="frame-corner tl"></div><div class="frame-corner tr"></div><div class="frame-corner bl"></div><div class="frame-corner br"></div>
+        <div class="diagram-top"><span><span class="micro-dot"></span> CONNECTION TOPOLOGY</span><span>LIVE VISUALIZATION / 01</span></div>
+        <svg class="network" viewBox="0 0 960 440" role="img" aria-label="Animated network diagram. Circuit paths draw from the central browser to surrounding network services.">
+          <defs>
+            <radialGradient id="hubGlow"><stop offset="0" stop-color="#3dd9f5" stop-opacity=".28"/><stop offset="1" stop-color="#3dd9f5" stop-opacity="0"/></radialGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <g class="backgrid" aria-hidden="true">
+            <path d="M0 45H960 M0 100H960 M0 155H960 M0 210H960 M0 265H960 M0 320H960 M0 375H960 M60 0V440 M130 0V440 M200 0V440 M270 0V440 M340 0V440 M410 0V440 M480 0V440 M550 0V440 M620 0V440 M690 0V440 M760 0V440 M830 0V440 M900 0V440"/>
+          </g>
+          <g class="trace-under">
+            <path d="M480 215 H327 V102 H165"/><path d="M480 215 H635 V102 H793"/><path d="M480 215 H293 V337 H156"/><path d="M480 215 H665 V337 H801"/><path d="M480 215 V57"/><path d="M480 215 V392"/>
+          </g>
+          <g class="traces">
+            <path class="trace t1" pathLength="100" d="M480 215 H327 V102 H165"/>
+            <path class="trace t2" pathLength="100" d="M480 215 H635 V102 H793"/>
+            <path class="trace t3" pathLength="100" d="M480 215 H293 V337 H156"/>
+            <path class="trace t4" pathLength="100" d="M480 215 H665 V337 H801"/>
+            <path class="trace t5" pathLength="100" d="M480 215 V57"/>
+            <path class="trace t6" pathLength="100" d="M480 215 V392"/>
+          </g>
+          <g class="pulses" aria-hidden="true">
+            <circle class="packet p1" r="4"><animateMotion dur="3.5s" begin="3.1s" repeatCount="indefinite" path="M480 215 H327 V102 H165"/></circle>
+            <circle class="packet p2" r="4"><animateMotion dur="4s" begin="3.8s" repeatCount="indefinite" path="M480 215 H635 V102 H793"/></circle>
+            <circle class="packet p3" r="4"><animateMotion dur="4.3s" begin="4.3s" repeatCount="indefinite" path="M480 215 H293 V337 H156"/></circle>
+            <circle class="packet p4" r="4"><animateMotion dur="3.7s" begin="4.8s" repeatCount="indefinite" path="M480 215 H665 V337 H801"/></circle>
+          </g>
+          <circle cx="480" cy="215" r="110" fill="url(#hubGlow)" class="hub-halo"/>
+          <circle cx="480" cy="215" r="73" class="hub-ring outer"/>
+          <circle cx="480" cy="215" r="62" class="hub-ring inner"/>
+          <circle cx="480" cy="215" r="49" class="hub-fill"/>
+          <g class="hub-icon"><rect x="461" y="197" width="38" height="29" rx="5"/><path d="M467 206h26 M467 213h26 M467 220h17"/><circle cx="490" cy="220" r="2"/></g>
+          <text x="480" y="296" text-anchor="middle" class="hub-caption">YOUR BROWSER</text>
+          <g class="endpoint e1"><circle cx="165" cy="102" r="25"/><circle cx="165" cy="102" r="17" class="node-inner"/><path d="M156 102h18m-9-9v18"/><text x="165" y="145">DNS</text></g>
+          <g class="endpoint e2"><circle cx="793" cy="102" r="25"/><circle cx="793" cy="102" r="17" class="node-inner"/><path d="M786 103l5 5 10-12"/><text x="793" y="145">HTTPS</text></g>
+          <g class="endpoint e3"><circle cx="156" cy="337" r="25"/><circle cx="156" cy="337" r="17" class="node-inner"/><path d="M145 341l7-10 7 7 7-14"/><text x="156" y="381">LATENCY</text></g>
+          <g class="endpoint e4"><circle cx="801" cy="337" r="25"/><circle cx="801" cy="337" r="17" class="node-inner"/><path d="M791 345v-13l10-6 10 6v13l-10 6z M791 332l10 7 10-7 M801 339v12"/><text x="801" y="381">WEBSITE</text></g>
+          <g class="endpoint e5"><circle cx="480" cy="57" r="11"/><text x="480" y="27">UPLINK</text></g>
+          <g class="endpoint e6"><circle cx="480" cy="392" r="11"/><text x="480" y="419">STATUS</text></g>
+          <g class="map-detail"><text x="27" y="26">TOPOLOGY / 001</text><text x="933" y="26" text-anchor="end">ENCRYPTED DELIVERY</text><text x="27" y="417">VISUAL ONLY — NOT A REAL-TIME NETWORK MAP</text></g>
+        </svg>
+        <div class="diagram-bottom"><span class="status-animated"><span class="blink"></span> TOPOLOGY SEQUENCE ACTIVE</span><button class="replay" id="replay" type="button" aria-label="Replay circuit animation">↻ REPLAY ANIMATION</button></div>
       </div>
+      <div class="action-area"><button id="run-test" class="primary" type="button"><span class="btn-icon">↗</span> RUN CONNECTION TEST <span class="arrow">→</span></button><div class="small-note">Checks access to this website, not arbitrary websites or TCP ports.</div></div>
     </section>
-
-    <footer>
-      Client-side diagnostics.
-      No test results are stored by this application.
-    </footer>
+    <section class="results" aria-labelledby="results-title">
+      <div class="results-title-row"><div><div class="section-overline">DIAGNOSTIC OUTPUT</div><h2 id="results-title">Connection status</h2></div><span class="results-tag" id="check-label">NOT TESTED</span></div>
+      <div class="result-grid">
+        <div class="result-card"><div class="result-label">BROWSER SIGNAL</div><strong id="browser-status">CHECKING</strong><span class="result-help">navigator.onLine indicator</span></div>
+        <div class="result-card"><div class="result-label">WEBSITE REQUEST</div><strong id="request-status">NOT TESTED</strong><span class="result-help">Same-origin fetch</span></div>
+        <div class="result-card"><div class="result-label">HTTP RESPONSE</div><strong id="http-status">—</strong><span class="result-help">This site only</span></div>
+        <div class="result-card"><div class="result-label">REQUEST DURATION</div><strong id="duration">—</strong><span class="result-help">Not ICMP latency</span></div>
+      </div>
+      <p class="result-message" id="result-message" role="status" aria-live="polite">Press “Run Connection Test” to begin. Results stay in your browser.</p>
+    </section>
   </main>
+  <footer class="footer"><span>CAN I CONNECT? / BUILT FOR THE OPEN WEB</span><span>PRIVACY BY DESIGN · NO EXTERNAL SCRIPTS</span></footer>
 </body>
 </html>
