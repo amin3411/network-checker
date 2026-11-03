@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none';
+                 script-src 'self';
+                 style-src 'self';
+                 connect-src 'self';
+                 img-src 'self';
+                 font-src 'self';
+                 object-src 'none';
+                 base-uri 'self';
+                 form-action 'none';
+                 upgrade-insecure-requests">
+
+  <meta name="referrer" content="no-referrer">
+
+  <title>Secure Network Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Network Connectivity Checker</h1>
+    <p>
+      Secure browser-based connectivity diagnostics
+    </p>
+
+    <section class="panel">
+      <h2>Connectivity status</h2>
+
+      <p id="browser-status">
+        Not checked
+      </p>
+
+      <button id="test-button" type="button">
+        Run Connectivity Test
+      </button>
+
+      <div id="results" role="status"
+           aria-live="polite">
+        Ready to test.
+      </div>
+    </section>
+
+    <footer>
+      Client-side diagnostics.
+      No test results are stored by this application.
+    </footer>
+  </main>
+</body>
+</html>
