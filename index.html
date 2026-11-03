@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-QD8ZisvQjYcfhb1b020l5qVsGXpwZMac8n10xeZTggA='; style-src 'sha256-m1SBA61mqizrsNXzpQQ0L6Q6SazVAvFsCEH/v+OAn/o='; connect-src 'self'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <title>Can I Connect? | Network Diagnostics</title>
   <meta name="description" content="A private, browser-based connectivity check with a responsive animated network circuit.">
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <style>:root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#050b13;color:#e5f0f7}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse 65% 39% at 50% 19%,#0b2a3b66,transparent 75%),#050b13;overflow-x:hidden}.noise{position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(#11263719 1px,transparent 1px),linear-gradient(90deg,#11263719 1px,transparent 1px);background-size:60px 60px;mask-image:linear-gradient(to bottom,#0006,transparent 85%)}.topbar{max-width:1280px;margin:auto;padding:27px 42px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1b34414a}.brand{color:#e9f6ff;text-decoration:none;font-weight:900;font-size:16px;letter-spacing:.1em;display:flex;align-items:center;gap:13px}.brand-accent{color:#55e3f3}.brand-symbol{display:grid;grid-template-columns:repeat(2,7px);gap:3px;transform:rotate(45deg);margin-right:6px}.brand-symbol span{height:7px;background:#4bd4e7;box-shadow:0 0 12px #3fd8ee88}.brand-symbol span:nth-child(2){opacity:.25}.brand-symbol span:nth-child(3){opacity:.6}.top-right{display:flex;gap:10px;align-items:center;color:#7195a8;font:600 10px ui-monospace,monospace;letter-spacing:.15em}.live-dot,.micro-dot,.blink{display:inline-block;width:6px;height:6px;border-radius:50%;background:#52e5cb;box-shadow:0 0 10px #52e5cb}.version{border:1px solid #2e4d5b;padding:5px 7px;margin-left:18px;color:#aac7d2}main{max-width:1200px;margin:auto;padding:0 30px}.hero{text-align:center;padding:66px 0 46px}.eyebrow{font:600 11px ui-monospace,monospace;letter-spacing:.23em;color:#5fc7da;display:flex;align-items:center;gap:16px;justify-content:center}.eyebrow-line{height:1px;width:28px;background:#1b6378}h1{font-weight:750;font-size:clamp(38px,6vw,72px);line-height:1.07;letter-spacing:-.055em;margin:20px 0 18px}h1 em{font-style:normal;background:linear-gradient(100deg,#4edbe5,#4e98de);color:transparent;background-clip:text}.hero-desc{font-size:15px;line-height:1.7;color:#89a2b3;max-width:530px;margin:0 auto 45px}.diagram-frame{border:1px solid #234352;background:#07131e99;position:relative;margin:auto;max-width:1000px;box-shadow:0 18px 85px #00131b88,0 0 40px #0f82a30b}.frame-corner{position:absolute;width:16px;height:16px;border-color:#67e7ee;z-index:2}.tl{top:-1px;left:-1px;border-top:2px solid;border-left:2px solid}.tr{top:-1px;right:-1px;border-top:2px solid;border-right:2px solid}.bl{bottom:-1px;left:-1px;border-bottom:2px solid;border-left:2px solid}.br{bottom:-1px;right:-1px;border-bottom:2px solid;border-right:2px solid}.diagram-top,.diagram-bottom{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;color:#7297aa;font:600 10px ui-monospace,monospace;letter-spacing:.12em;border-bottom:1px solid #1c3744}.diagram-bottom{border-top:1px solid #1c3744;border-bottom:0}.diagram-top span:first-child{display:flex;align-items:center;gap:10px}.network{width:100%;height:auto;display:block}.backgrid path{stroke:#173449;stroke-width:.7;opacity:.48;fill:none}.trace-under path{fill:none;stroke:#285b70;stroke-width:2;opacity:.38}.trace{fill:none;stroke:#5be6f3;stroke-width:2.7;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;filter:url(#glow);animation:draw 1.15s cubic-bezier(.25,.1,.15,1) forwards}.t1{animation-delay:.3s}.t2{animation-delay:.72s}.t3{animation-delay:1.14s}.t4{animation-delay:1.56s}.t5{animation-delay:1.98s}.t6{animation-delay:2.35s}@keyframes draw{to{stroke-dashoffset:0}}.packet{fill:#b6ffff;filter:url(#glow);opacity:0;animation:packet-show .3s forwards 3s}@keyframes packet-show{to{opacity:1}}.hub-halo{animation:halo 4s ease-in-out infinite}@keyframes halo{50%{opacity:.4;transform:scale(1.1);transform-origin:480px 215px}}.hub-ring{fill:none;stroke:#277f99;stroke-width:1.5}.hub-ring.outer{stroke-dasharray:4 9;animation:spin 28s linear infinite;transform-origin:480px 215px}.hub-ring.inner{stroke:#42cddd;stroke-dasharray:8 5;opacity:.7;animation:spin 24s linear infinite reverse;transform-origin:480px 215px}@keyframes spin{to{transform:rotate(360deg)}}.hub-fill{fill:#0b2937;stroke:#53e3ed;stroke-width:2;filter:url(#glow)}.hub-icon rect{fill:none;stroke:#9df7f7;stroke-width:2}.hub-icon path{fill:none;stroke:#64c8d8;stroke-width:1.4}.hub-icon circle{fill:#80e8eb}.hub-caption{fill:#b7e3e9;font:600 12px ui-monospace,monospace;letter-spacing:.12em}.endpoint{opacity:.18;animation:node-light .55s ease-out forwards}.e1{animation-delay:1.35s}.e2{animation-delay:1.77s}.e3{animation-delay:2.19s}.e4{animation-delay:2.61s}.e5{animation-delay:3s}.e6{animation-delay:3.38s}@keyframes node-light{to{opacity:1}}.endpoint>circle:first-child{fill:#0a2533;stroke:#5ce3eb;stroke-width:2;filter:url(#glow)}.endpoint>.node-inner{fill:none;stroke:#1c7182;stroke-width:1;filter:none}.endpoint path{fill:none;stroke:#91fbf5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.endpoint text{font:600 12px ui-monospace,monospace;letter-spacing:.12em;fill:#9ccad8;text-anchor:middle}.map-detail text{font:10px ui-monospace,monospace;letter-spacing:.08em;fill:#426779}.blink{animation:blink 1.5s ease-in-out infinite}@keyframes blink{50%{opacity:.25}}.status-animated{color:#4fd5cf;display:flex;gap:10px;align-items:center}.replay{color:#b7dbe4;background:transparent;border:0;font:600 10px ui-monospace,monospace;letter-spacing:.1em;cursor:pointer;padding:11px}.replay:hover,.replay:focus-visible{color:#64edf8;text-decoration:underline}.action-area{margin-top:30px}.primary{background:#48d5e5;border:1px solid #8af0f6;padding:18px 26px;color:#072231;cursor:pointer;font:800 12px ui-monospace,monospace;letter-spacing:.1em;box-shadow:0 0 38px #38d9ef32;display:inline-flex;align-items:center;gap:20px;transition:background .2s,transform .2s}.primary:hover{background:#8df4f3;transform:translateY(-2px)}.primary:disabled{opacity:.55;cursor:wait;transform:none}.primary:focus-visible,.replay:focus-visible{outline:2px solid #fff;outline-offset:4px}.btn-icon{font-size:20px}.arrow{font-size:20px}.small-note{color:#658696;font-size:12px;margin-top:15px}.results{max-width:1000px;margin:6px auto 75px;text-align:left}.results-title-row{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #214251;padding-bottom:19px}.section-overline{color:#46c4d2;font:600 10px ui-monospace,monospace;letter-spacing:.2em}.results h2{font-size:25px;letter-spacing:-.03em;margin:8px 0 0}.results-tag{color:#98b9c9;border:1px solid #294856;padding:8px 10px;font:600 10px ui-monospace,monospace;letter-spacing:.1em}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.result-card{padding:21px 19px;background:#0b1925;border:1px solid #1d3947;min-height:137px}.result-label{font:600 10px ui-monospace,monospace;color:#719aaa;letter-spacing:.12em}.result-card strong{display:block;margin:24px 0 8px;font:700 17px ui-monospace,monospace;color:#d5ecf3}.result-help{color:#577c8d;font-size:11px}.result-message{font-size:13px;color:#84a8b8;border-left:2px solid #2ca5bb;padding:12px 18px;margin-top:19px;line-height:1.6}.footer{border-top:1px solid #1a3240;max-width:1280px;margin:auto;padding:25px 42px 35px;display:flex;justify-content:space-between;gap:16px;color:#567888;font:10px ui-monospace,monospace;letter-spacing:.1em}@media(max-width:680px){.topbar{padding:19px 20px}.top-right{font-size:0}.top-right .version{font-size:10px;margin-left:4px}.hero{padding-top:45px}.hero-desc{padding:0 12px}.diagram-top,.diagram-bottom{padding:0 12px;font-size:8px}.diagram-top>span:last-child{display:none}.result-grid{grid-template-columns:repeat(2,1fr)}main{padding:0 14px}.footer{padding:20px;flex-direction:column}.replay{font-size:9px}.status-animated{font-size:8px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.trace{stroke-dashoffset:0!important}.endpoint,.packet{opacity:1!important}.packet{display:none}}
+</style>
+  
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -80,5 +81,66 @@
     </section>
   </main>
   <footer class="footer"><span>CAN I CONNECT? / BUILT FOR THE OPEN WEB</span><span>PRIVACY BY DESIGN · NO EXTERNAL SCRIPTS</span></footer>
+<script>'use strict';
+const byId = id => document.getElementById(id);
+const runButton = byId('run-test');
+let currentController = null;
+function browserState(){byId('browser-status').textContent = navigator.onLine ? 'ONLINE*' : 'OFFLINE*';}
+window.addEventListener('online',browserState);
+window.addEventListener('offline',browserState);
+browserState();
+if (window.location.protocol === 'file:') {
+  byId('check-label').textContent = 'LOCAL PREVIEW';
+  byId('request-status').textContent = 'SERVER NEEDED';
+  byId('result-message').textContent = 'Animation is available locally. To run an HTTPS connectivity test, publish this page on GitHub Pages (or serve it via localhost).';
+}
+byId('replay').addEventListener('click',()=>{
+  // Replacing the SVG with a local clone restarts CSS animations without remote scripts.
+  const svg=document.querySelector('.network');
+  const fresh=svg.cloneNode(true);
+  svg.replaceWith(fresh);
+});
+runButton.addEventListener('click',async()=>{
+  if (window.location.protocol === 'file:') {
+    byId('result-message').textContent = 'Local file preview cannot reliably test HTTPS connectivity. Open your published GitHub Pages URL, or use a local HTTP server.';
+    byId('check-label').textContent = 'LOCAL PREVIEW';
+    byId('request-status').textContent = 'SERVER NEEDED';
+    return;
+  }
+  if(currentController)return;
+  const controller=new AbortController();
+  currentController=controller;
+  runButton.disabled=true;
+  byId('request-status').textContent='TESTING';
+  byId('http-status').textContent='—';
+  byId('duration').textContent='—';
+  byId('check-label').textContent='RUNNING';
+  byId('result-message').textContent='Sending a fresh HTTPS request to this website…';
+  const timeout=setTimeout(()=>controller.abort(),6000);
+  const start=performance.now();
+  try{
+    // Requests are strictly same-origin: there is no free-form target field or backend proxy.
+    const url=new URL(window.location.href);
+    url.searchParams.set('_probe',crypto.randomUUID());
+    const response=await fetch(url,{method:'GET',mode:'same-origin',cache:'no-store',credentials:'omit',redirect:'error',signal:controller.signal});
+    const ms=Math.round(performance.now()-start);
+    byId('request-status').textContent=response.ok?'REACHABLE':'HTTP ERROR';
+    byId('http-status').textContent=String(response.status);
+    byId('duration').textContent=`${ms} ms`;
+    byId('check-label').textContent=response.ok?'COMPLETE':'ERROR';
+    byId('result-message').textContent=response.ok?'Your browser successfully retrieved this website. This does not verify connectivity to other sites, DNS resolvers or TCP ports.':'The website returned an unsuccessful HTTP status.';
+  }catch(error){
+    byId('request-status').textContent='FAILED';
+    byId('check-label').textContent='FAILED';
+    byId('duration').textContent=`${Math.round(performance.now()-start)} ms`;
+    byId('result-message').textContent=error.name==='AbortError'?'The request exceeded the six-second timeout.':'The request failed, was blocked, or the connection is unavailable.';
+  }finally{
+    clearTimeout(timeout);
+    currentController=null;
+    runButton.disabled=false;
+    browserState();
+  }
+});
+</script>
 </body>
 </html>
